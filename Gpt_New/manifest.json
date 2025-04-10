@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "ByteBuddy Tech Advisor",
+  "version": "3.0",
+  "description": "Get price comparisons and tech reviews instantly!",
+  "permissions": ["storage", "activeTab", "commands"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "ByteBuddy"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Q",
+        "mac": "Command+Q"
+      },
+      "description": "Toggle the extension on/off"
+    }
+  }
+}
