@@ -1,0 +1,208 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  width: 330px;
+  padding: 10px;
+  background-color: #0d0d0d;
+  color: #fff;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Animated Heading */
+h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #ff1a1a;
+  margin-bottom: 10px;
+  animation: pulseGlow 1.5s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { text-shadow: 0 0 10px #ff1a1a; }
+  50% { text-shadow: 0 0 20px #ff4d4d; }
+}
+
+input, button {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 6px;
+}
+
+input {
+  background: #1a1a1a;
+  color: #fff;
+  border: 1px solid #ff1a1a;
+}
+
+button {
+  background: #ff1a1a;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #cc0000;
+}
+
+/* Tab Buttons */
+.tab-slider {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.tab-btn {
+  flex: 1;
+  margin: 0 2px;
+  padding: 6px;
+  background-color: #1f1f1f;
+  color: #ffcccc;
+  border-radius: 6px;
+  border: 1px solid #ff1a1a;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+  background-color: #ff1a1a;
+  color: white;
+}
+
+.tab-btn:hover {
+  background-color: #ff3333;
+  transform: scale(1.05);
+}
+
+/* Tabs */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* ChatGPT Box */
+.chatgpt-box {
+  background: #1f1f1f;
+  padding: 12px;
+  border-left: 4px solid #ff4d4d;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px rgba(255, 26, 26, 0.2);
+  transition: all 0.3s ease;
+}
+
+.chatgpt-box:hover {
+  background: #2a2a2a;
+  transform: scale(1.01);
+  box-shadow: 0 0 15px rgba(255, 26, 26, 0.4);
+}
+
+/* Product Cards */
+.product-card {
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #333;
+  box-shadow: 0 0 8px #111;
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+  transform: scale(1.01);
+  border-color: #ff1a1a;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+a {
+  color: #ff4d4d;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #ff8080;
+}
+#assistant-fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+#openAssistant {
+  background-color: #ff1a1a;
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+}
+#openAssistant:hover {
+  transform: scale(1.1);
+}
+
+#assistant-popup {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  background: #111;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 10px;
+  width: 250px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+#assistant-popup.hidden {
+  display: none;
+}
+
+#assistantInput {
+  width: 100%;
+  padding: 5px;
+  background: #222;
+  color: #fff;
+  border: 1px solid #444;
+  resize: vertical;
+  min-height: 60px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+#runAssistant {
+  margin-top: 6px;
+  width: 100%;
+  background: #e60000;
+  border: none;
+  color: #fff;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+#runAssistant:hover {
+  background: #cc0000;
+}
+
+#assistantResult {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #ddd;
+}

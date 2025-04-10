@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>ByteBuddy</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        html, body {
+            height: auto;
+            min-height: 100px;
+        }
+        #resizeControls {
+            text-align: right;
+            margin-bottom: 6px;
+        }
+        .resize-btn {
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 4px 8px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+        .resize-btn:hover {
+            background: #ff1a1a;
+        }
+    </style>
+</head>
+<body>
+    <h2>ByteBuddy</h2>
+    <input type="text" id="searchInput" placeholder="Enter product name..." />
+    <button id="searchBtn">Search</button>
+
+    <div id="resizeControls">
+        <button class="resize-btn" onclick="resizePopup('small')">−</button>
+        <button class="resize-btn" onclick="resizePopup('normal')">⤢</button>
+        <button class="resize-btn" onclick="resizePopup('large')">+</button>
+    </div>
+
+    <div class="tab-slider">
+        <button id="gptTab" class="tab-btn active">ChatGPT</button>
+        <button id="amazonTab" class="tab-btn">Amazon</button>
+        <button id="youtubeTab" class="tab-btn">YouTube</button>
+    </div>
+
+    <div id="gptContent" class="tab-content active"></div>
+    <div id="amazonContent" class="tab-content"></div>
+    <div id="youtubeContent" class="tab-content"></div>
+
+    <script src="popup.js"></script>
+
+    <div id="assistant-fab">
+      <button id="openAssistant" title="Open Assistant">🤖</button>
+      <div id="assistant-popup" class="hidden">
+        <textarea id="assistantInput" placeholder="Ask something..."></textarea>
+        <button id="runAssistant">Run</button>
+        <div id="assistantResult"></div>
+      </div>
+    </div>
+</body>
+</html>
